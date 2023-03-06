@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "584acb33-af58-4745-b65a-aec39b54309d",
+		"name": "Product EAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26181774"
+	},
+	"item": [
+		{
+			"name": "Create Ean Code",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"eanCode\": \"5234565536342\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/ean",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"ean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ean Code",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/ean/53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"ean",
+						"53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Ean Code",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/ean/find?productCode=89012&destinationCode=3&providerCode=5234568",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"ean",
+						"find"
+					],
+					"query": [
+						{
+							"key": "productCode",
+							"value": "89012"
+						},
+						{
+							"key": "destinationCode",
+							"value": "3"
+						},
+						{
+							"key": "providerCode",
+							"value": "5234568"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ean Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"eanCode\": \"4412341234338\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/ean/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"ean",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ean Code",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/ean/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"ean",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "useBrowser",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "grant_type",
+				"value": "implicit",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "test321",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "test",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "{{callbackUrl}}",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "{{scope}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{cognitoClientId}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{accesTokenEndpoint}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{authUrl}}",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cognitoClientId",
+			"value": "26bphp547ks2vo94aim734aa22",
+			"type": "string"
+		},
+		{
+			"key": "authUrl",
+			"value": "https://product-eas.auth.eu-west-3.amazoncognito.com/login",
+			"type": "string"
+		},
+		{
+			"key": "accesTokenEndpoint",
+			"value": "https://product-eas.auth.eu-west-3.amazoncognito.com/oauth2/token",
+			"type": "string"
+		},
+		{
+			"key": "scope",
+			"value": "openid profile",
+			"type": "string"
+		},
+		{
+			"key": "callbackUrl",
+			"value": "https://oauth.pstmn.io/v1/callback",
+			"type": "string"
+		}
+	]
+}
