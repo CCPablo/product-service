@@ -17,8 +17,8 @@ import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
-import org.springframework.cache.CacheManager;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
@@ -126,9 +126,9 @@ public class ProductController {
 
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<ProductResponseDTO> deleteProduct() {
-        return ResponseEntity.ok(null);
+        return new ResponseEntity<>(HttpStatusCode.valueOf(501));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
