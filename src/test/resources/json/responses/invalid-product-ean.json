@@ -1,0 +1,9 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "message": "Ean code must be numeric and with length of 13",
+      "level": "ERROR"
+    }
+  ]
+}

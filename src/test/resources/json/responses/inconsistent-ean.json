@@ -1,0 +1,13 @@
+{
+  "data": {
+    "id": 1,
+    "eanCode": "8437008459051",
+    "productCode": "45905",
+    "destinationName": "España",
+    "destinationCode": "7",
+    "providerName": "Hacendado",
+    "providerCode": "8437008",
+    "inconsistentEan": true
+  },
+  "errors": []
+}

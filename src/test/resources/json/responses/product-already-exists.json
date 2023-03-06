@@ -1,0 +1,9 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "message": "Product EAN already exists. EAN 8437008459051",
+      "level": "ERROR"
+    }
+  ]
+}

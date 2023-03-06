@@ -1,0 +1,9 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "message": "Product not found",
+      "level": "WARNING"
+    }
+  ]
+}

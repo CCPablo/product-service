@@ -1,0 +1,13 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "message": "Provider code must be numeric and with length of 7",
+      "level": "ERROR"
+    },
+    {
+      "message": "Product code must be numeric and with length of 5",
+      "level": "ERROR"
+    }
+  ]
+}
