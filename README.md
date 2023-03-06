@@ -46,9 +46,7 @@ java -jar target/product-controller-1.0-SNAPSHOT.jar
 
 Returns the product with the given ID
 
-```console
-GET /product/ean/{id}
-```
+`GET /product/ean/{id}`
 
 Path Parameter
 
@@ -68,9 +66,7 @@ Responses
 
 Returns the product with the given details
 
-```console
-GET /product/ean/find
-```
+`GET /product/ean/find`
 
 Parameters
 
@@ -93,9 +89,7 @@ Responses
 
 Creates a new product with the provided EAN code
 
-```console
-PUT /product/ean/find
-```
+`PUT /product/ean/find`
 
 Request Body
 
@@ -114,9 +108,7 @@ Responses
 
 ### Update Product EAN
 
-```console
-POST /product/ean/find/{id}
-```
+`POST /product/ean/find/{id}`
 
 Updates a product with the provided EAN code
 
@@ -146,9 +138,7 @@ Responses
 
 Delete a product
 
-```console
-DELETE /product/ean/{id}
-```
+`DELETE /product/ean/{id}`
 
 Path Parameter
 
@@ -161,7 +151,7 @@ Responses
 | Status Code | Description     | 	Response Body        |
 |-------------|-----------------|-----------------------|
 | 401         | Unauthorized    | Credentials not valid |
-| 500         | Not implemented | null                  |
+| 501         | Not implemented | null                  |
 
 ## Postman
 
@@ -171,20 +161,23 @@ Postman collection available under ```/src/main/resources/postman```
 
 Requests must be sent with Authorization Bearer token.
 
+Setting up must be done in Authorization Tab
+
 Steps:
 
 1. Make sure the following collection variables are set:
 
-| VARIABLE           | INITIAL VALUE                                                     | 	CURRENT VALUE                                                    |
-|--------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-| cognitoClientId    | 26bphp547ks2vo94aim734aa22                                        | 26bphp547ks2vo94aim734aa22                                        |
-| authUrl            | https://product-ean.auth.eu-west-3.amazoncognito.com/login        | https://product-ean.auth.eu-west-3.amazoncognito.com/login        |
-| accesTokenEndpoint | https://product-ean.auth.eu-west-3.amazoncognito.com/oauth2/token | https://product-ean.auth.eu-west-3.amazoncognito.com/oauth2/token |
-| scope              | openid profile                                                    | openid profile                                                    |
-| callbackUrl        | https://oauth.pstmn.io/v1/callback                                | https://oauth.pstmn.io/v1/callback                                |
+| VARIABLE            | INITIAL VALUE                                                     | 	CURRENT VALUE                                                    |
+|---------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
+| cognitoClientId     | 26bphp547ks2vo94aim734aa22                                        | 26bphp547ks2vo94aim734aa22                                        |
+| authUrl             | https://product-ean.auth.eu-west-3.amazoncognito.com/login        | https://product-ean.auth.eu-west-3.amazoncognito.com/login        |
+| accessTokenEndpoint | https://product-ean.auth.eu-west-3.amazoncognito.com/oauth2/token | https://product-ean.auth.eu-west-3.amazoncognito.com/oauth2/token |
+| scope               | openid profile                                                    | openid profile                                                    |
+| callbackUrl         | https://oauth.pstmn.io/v1/callback                                | https://oauth.pstmn.io/v1/callback                                |
 
+2. In tab 'Authorization', set Type OAuth 2.0, Add auth data to Request Headers.
 
-2. In tab 'Authorization' configure New Token with configuration options:
+3. Configure New Token with configuration options:
 
 | Option                | Value                     |
 |-----------------------|---------------------------|
@@ -196,4 +189,4 @@ Steps:
 | Scope                 | {{scope}}                 |
 | Client Authentication | Send as Basic Auth header |
 
-3. Press Get New Access Token and Login with Google, Sign in with new user and password, or Log in using user 'test' password 'test321'
+4. Press Get New Access Token and Login with Google, Sign in with new user and password, or Log in using user 'test' password 'test321'
